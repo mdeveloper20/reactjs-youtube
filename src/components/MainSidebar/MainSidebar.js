@@ -14,8 +14,12 @@ import settings from "../../assets/images/settings.svg";
 import subscriptions from "../../assets/images/subscriptions.svg";
 import trending from "../../assets/images/trending.svg";
 import watchLater from "../../assets/images/watchLater.svg";
+import sports from "../../assets/images/sports.jpg";
+import video from "../../assets/images/video.jpg";
+import game from "../../assets/images/game.jpg";
+import './main-sidebar.css';
 
-class MainSidebar extends Component {
+export default class MainSidebar extends Component {
 	render() {
 		return (
 			<section class="sidebar">
@@ -52,22 +56,13 @@ class MainSidebar extends Component {
 					</li>
 				</ul>
 
-				<span class="title">Subscriptions</span>
+				<span class="title">Best of Youtube</span>
 
 				<ul>
 					<li>
 						<img
 							id="img"
-							src="https://yt3.ggpht.com/koJfC5WxCnKnl0rGGMxqti0eD4Pbm9Px6eolU_xD6Ec9RQnhzKyRt53TWlOVcK8iK8jpWVEtw9s=s88-c-k-c0xffffffff-no-nd-rj"
-							width="24"
-							height="24"
-						/>
-						Popular on Youtube
-					</li>
-					<li>
-						<img
-							id="img"
-							src="https://yt3.ggpht.com/Qpuqmo7x6Uz6OkqNuu5B2Pr3rQLHwceDvYn7e372xUhkY_EjsU__kU8IcsBd81DF-N3gWFlGGw=s88-c-k-c0xffffffff-no-nd-rj"
+							src={sports}
 							width="24"
 							height="24"
 						/>
@@ -76,7 +71,7 @@ class MainSidebar extends Component {
 					<li>
 						<img
 							id="img"
-							src="https://yt3.ggpht.com/Mc4ggYHgL1ANfvmy8PT3wSYVrK1r5gZhdQCK1sPu4FI5gFNlJ_EiowRi5faq1Ku7mcoqN-W6lLQ=s88-c-k-c0xffffffff-no-nd-rj"
+							src={game}
 							width="24"
 							height="24"
 						/>
@@ -85,7 +80,7 @@ class MainSidebar extends Component {
 					<li>
 						<img
 							id="img"
-							src="https://yt3.ggpht.com/NAxG9tyiFeMjAkktAPSAFFXwxctJe62ycjSCsAw_AW4Bk1CDblULKQqSYGmN7bw1MzTKJOOr=s88-c-k-c0xffffffff-no-nd-rj"
+							src={video}
 							width="24"
 							height="24"
 						/>

@@ -17,7 +17,7 @@ export default class Header extends Component {
 				<button class="back_btn">
 					<img src={icon1SVG} alt="menu" />
 				</button>
-				<button class="menu">
+				<button onClick={this.props.onMenuClick} class="menu">
 					<img src={menuSVG} alt="menu" />
 				</button>
 				<button class="logo">
