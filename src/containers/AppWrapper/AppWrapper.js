@@ -10,7 +10,6 @@ export default class AppWrapper extends Component {
 	};
 
 	onMenuClick = () => {
-		console.log("menu");
 		const { wrapperAdditionalClass } = this.state;
 		let wrapper = wrapperAdditionalClass;
 
