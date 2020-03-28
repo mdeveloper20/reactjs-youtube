@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../components/Header/Header";
-import MainSidebar from "../../components/MainSidebar/MainSidebar";
+import MainSidebar from "components/MainSidebar/MainSidebar";
 import SmallSidebar from "../../components/SmallSidebar/SmallSidebar";
 
 export default class AppWrapper extends Component {
@@ -57,8 +57,8 @@ export default class AppWrapper extends Component {
                     onSearchBtnClick={this.onSearchBtnClick}
                     headerAdditionalClass={this.state.headerAdditionalClass}
 				/>
-				<MainSidebar />
-				<SmallSidebar />
+				<MainSidebar/>
+				<SmallSidebar/>
 				{this.props.childern}
 			</div>
 		);

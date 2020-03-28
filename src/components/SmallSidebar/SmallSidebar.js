@@ -8,7 +8,7 @@ import trending from "../../assets/images/trending.svg";
 
 import "./small-sidebar.css";
 
-export default class MainSidebar extends Component {
+export default class SmallSidebar extends Component {
 	render() {
 		return (
 			<section class="sidebar_small">
