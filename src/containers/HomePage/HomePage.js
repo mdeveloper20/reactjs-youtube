@@ -1,13 +1,13 @@
 import React,{Component} from 'react'
-import App from '../App/App'
+import AppWrapper from '../AppWrapper/AppWrapper'
 
 export default class HomePage extends Component {
 
     render(){
         return(
-            <App>
+            <AppWrapper>
 
-            </App>
+            </AppWrapper>
         )
     }
 

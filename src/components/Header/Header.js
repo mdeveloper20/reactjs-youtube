@@ -8,13 +8,13 @@ import searchBtnSVG from "../../assets/images/searchBtn.svg";
 import newVideoSVG from "../../assets/images/newVideo.svg";
 import appsSVG from "../../assets/images/apps.svg";
 import notificationsSVG from "../../assets/images/notifications.svg";
-import './header.css';
+import "./header.css";
 
 export default class Header extends Component {
 	render() {
 		return (
-			<header class="top">
-				<button class="back_btn">
+			<header class={`top ${this.props.headerAdditionalClass}`}>
+				<button onClick={this.props.onSearchBtnClick} class="back_btn">
 					<img src={icon1SVG} alt="menu" />
 				</button>
 				<button onClick={this.props.onMenuClick} class="menu">
@@ -31,7 +31,7 @@ export default class Header extends Component {
 					</button>
 				</div>
 
-				<button class="search_btn">
+				<button onClick={this.props.onSearchBtnClick} class="search_btn">
 					<img src={searchBtnSVG} alt="menu" />
 				</button>
 
