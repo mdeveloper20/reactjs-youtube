@@ -10,6 +10,7 @@
     grid-auto-rows: min-content;
 }
 
+
 .videos h2{
     grid-column: 1 / -1;
     padding: 35px 20px  0 20px;
@@ -58,4 +59,29 @@
     .videos{
         grid-column: 1 / -1;
     }
+}
+
+.videos.small-mode{
+    grid-template-columns: 1fr;
+
+}
+
+.videos.small-mode .video{
+    grid-template-columns: 1fr 1.4fr;
+}
+
+.videos.small-mode .thumbnail{
+    grid-column: 1 / 2;
+
+}
+
+.videos.small-mode h2{
+    grid-column: 1 / -1;
+    padding: 15px 20px  0 0;
+    margin-top: 35px;
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+    text-align: start;
+    font-weight: normal;
+    border-top: 1px solid #cccccc;
 }

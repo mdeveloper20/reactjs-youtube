@@ -23,11 +23,3 @@ body{
   box-sizing: border-box;
 
 }
-.wrapper{
-  display: grid;
-  grid-template-areas: 
-  "header header header header"
-  "sidebar videos videos videos";
-  grid-template-columns: 240px 1fr 1fr;
-  position: relative;
-}

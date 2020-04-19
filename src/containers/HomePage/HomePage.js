@@ -1,16 +1,22 @@
 import React, { Component } from 'react'
 import AppWrapper from '../AppWrapper/AppWrapper'
 import VideoGrid from '../../components/VideoGrid/VideoGrid'
+import { withRouter } from "react-router-dom";
 
-export default class HomePage extends Component {
+class HomePage extends Component {
 
+    onVideoClick = () => {
+        this.props.history.push('/watch')
+    }
     render() {
         return (
-            <AppWrapper>
-                <VideoGrid headerTitle='Recommended' />
+            <AppWrapper hideSidebar={false}>
+                <VideoGrid onVideoClick={this.onVideoClick} headerTitle='Recommended' />
 
             </AppWrapper>
         )
     }
 
 }
+
+export default withRouter(HomePage)

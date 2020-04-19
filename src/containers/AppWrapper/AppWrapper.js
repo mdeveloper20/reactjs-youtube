@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../../components/Header/Header'
 import MainSidebar from '../../components/MainSidebar/MainSidebar'
 import SmallSidebar from '../../components/SmallSidebar/SmallSidebar'
+import "./app-wrapper.css";
 
 export default class AppWrapper extends Component {
     state = {
@@ -11,9 +12,10 @@ export default class AppWrapper extends Component {
 
     onMenuClick = () => {
         const { wrapperAdditionalClass } = this.state
+        const { hideSidebar } = this.props;
         let wrapper = wrapperAdditionalClass
 
-        if (window.matchMedia('(max-width: 1300px)').matches) {
+        if (window.matchMedia('(max-width: 1300px)').matches || hideSidebar) {
             if (wrapperAdditionalClass === 'menu_overlay') {
                 wrapper = ''
             } else {
@@ -49,14 +51,17 @@ export default class AppWrapper extends Component {
     }
 
     render() {
+        const { hideSidebar } = this.props;
+        const { alwaysHide } = this.props;
+
         return (
-            <div className={`wrapper ${this.state.wrapperAdditionalClass}`}>
+            <div className={`wrapper ${this.state.wrapperAdditionalClass} ${hideSidebar ? 'hideSidebar' : ''}`}>
                 <Header
                     onMenuClick={this.onMenuClick}
                     onSearchBtnClick={this.onSearchBtnClick}
                     headerAdditionalClass={this.state.headerAdditionalClass}
                 />
-                <MainSidebar />
+                <MainSidebar alwaysHide={alwaysHide} />
                 <SmallSidebar />
                 {this.props.children}
             </div>
