@@ -4,8 +4,10 @@
     display: grid;
     grid-template-columns: 2fr 1.2fr;
     grid-gap: 20px;
-    grid-template-rows: 300px;
     margin: 15px 30px;
+    grid-auto-rows: min-content;
+    padding:0 100px
+
 }
 
 .video_container .player{
@@ -71,6 +73,8 @@
     margin-top: 20px;
     text-align: start;
     padding-bottom: 20px;
+    grid-auto-rows: min-content;
+
 }
 .video_container .comments .author{
     font-weight: bold;
@@ -89,6 +93,12 @@
 @media(max-width:1000px){
     .watch_page{
         grid-template-columns: 1fr;
+
+    }
+}
+@media(max-width:1500px){
+    .watch_page{
+        padding:0 !important;
 
     }
 }

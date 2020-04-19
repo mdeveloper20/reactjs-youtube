@@ -3,13 +3,17 @@ import Header from '../../components/Header/Header'
 import MainSidebar from '../../components/MainSidebar/MainSidebar'
 import SmallSidebar from '../../components/SmallSidebar/SmallSidebar'
 import "./app-wrapper.css";
+import { withRouter } from 'react-router-dom';
 
-export default class AppWrapper extends Component {
+class AppWrapper extends Component {
     state = {
         wrapperAdditionalClass: '',
         headerAdditionalClass: '',
     }
 
+    onLogoClick = () => {
+        this.props.history.push('/')
+    }
     onMenuClick = () => {
         const { wrapperAdditionalClass } = this.state
         const { hideSidebar } = this.props;
@@ -60,6 +64,7 @@ export default class AppWrapper extends Component {
                     onMenuClick={this.onMenuClick}
                     onSearchBtnClick={this.onSearchBtnClick}
                     headerAdditionalClass={this.state.headerAdditionalClass}
+                    onLogoClick={this.onLogoClick}
                 />
                 <MainSidebar alwaysHide={alwaysHide} />
                 <SmallSidebar />
@@ -68,3 +73,5 @@ export default class AppWrapper extends Component {
         )
     }
 }
+
+export default withRouter(AppWrapper);
